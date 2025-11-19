@@ -88,7 +88,7 @@ function Dashboard() {
 
       <div
         className="flex flex-col justify-between bg-zinc-900/60 backdrop-blur-xl 
-        px-5 pt-5 pb-4 rounded-2xl max-w-2xl w-full h-[85vh]
+        px-5 pt-5 pb-4 rounded-2xl max-w-2xl w-full h-[80vh]
         border border-zinc-700 shadow-[0_0_25px_rgba(0,255,120,0.14)]"
       >
         <Header RoomId={roomId} />

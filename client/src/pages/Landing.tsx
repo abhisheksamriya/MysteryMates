@@ -12,7 +12,7 @@ const Landing = () => {
       <div>
         <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-green-500 rounded-full opacity-5 blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-green-500 rounded-full opacity-5 blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-green-500 rounded-full opacity-3 blur-2xl animate-pulse delay-500"></div>
+        <div className="hidden md:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-green-500 rounded-full opacity-3 blur-2xl animate-pulse delay-500"></div>
 
         <div className="text-center max-w-5xl mx-auto relative z-10">
           {/* Main Heading */}
