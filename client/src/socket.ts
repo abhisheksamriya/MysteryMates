@@ -1,7 +1,7 @@
 let socket: WebSocket | null = null;
 let roomId: string | null = null;
 let username: string | null = null;
-let isConnecting = false;
+let _isConnecting = false;
 let wsUrl = import.meta.env.VITE_WS_URL;
 
 export function setUsername(name: string) {
@@ -18,12 +18,12 @@ export function createSocket(joinedRoomId: string, user: string) {
     socket.close();
   }
 
-  isConnecting = true;
+  _isConnecting = true;
   socket = new WebSocket(wsUrl);
 
   socket.onopen = () => {
     console.log("✅ Socket connected");
-    isConnecting = false;
+    _isConnecting = false;
 
     // Send join message immediately after connection
     socket?.send(
@@ -38,12 +38,12 @@ export function createSocket(joinedRoomId: string, user: string) {
 
   socket.onclose = () => {
     console.warn("🔌 Socket closed");
-    isConnecting = false;
+    _isConnecting = false;
   };
 
   socket.onerror = (error) => {
     console.error("❌ Socket error:", error);
-    isConnecting = false;
+    _isConnecting = false;
   };
 
   return socket;
@@ -64,6 +64,6 @@ export function disconnect() {
     socket = null;
     roomId = null;
     username = null;
-    isConnecting = false;
+    _isConnecting = false;
   }
 }
