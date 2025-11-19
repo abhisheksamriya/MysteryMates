@@ -69,7 +69,13 @@ const Landing = () => {
             </div>
           </div>
           <h1 className="text-zinc-500 pt-10 font-doto">
-            made with ❤️ by <span className="text-green-400">Abhishek</span>
+            made with ❤️ by{" "}
+            <a
+              href="https://github.com/abhisheksamriya"
+              className="text-green-400"
+            >
+              Abhishek
+            </a>
           </h1>
         </div>
       </div>
